@@ -8,7 +8,7 @@ const OTPModel = require("../models/otpModel");
 class authController {
   async userRegister(req, res) {
     try {
-      const { name, email, password, about } = req.body;
+      const { name, email, password, about, role } = req.body;
       if (!name || !email || !password || !about) {
         return res.status(400).json({
           success: false,
@@ -29,6 +29,7 @@ class authController {
         email,
         password,
         about,
+        role
       };
 
       const HashPassword = await bcrypt.hash(password, 10);

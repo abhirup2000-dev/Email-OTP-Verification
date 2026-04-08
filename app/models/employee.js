@@ -23,6 +23,11 @@ const employeeSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    role:{
+      type: String,
+      enum: ["user", "admin", "manager"],
+      default: "user",
+    },
     department: {
       name: {
         type: String,

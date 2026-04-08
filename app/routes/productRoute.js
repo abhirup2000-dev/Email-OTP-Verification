@@ -5,7 +5,7 @@ const autCheck = require('../middleware/userAuthCheck')
 
 //product routes (CRUD)
 
-// router.use(autCheck)
+router.use(autCheck)
 
 router.post('/create-product', autCheck, productController.createProduct)
 router.get('/products', autCheck, productController.getAllProducts)
