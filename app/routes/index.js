@@ -7,9 +7,8 @@ const productRoute = require('../routes/productRoute')
 
 const authRoute = require('../routes/authRoute')
 
-
-router.use(productRoute)
 router.use(authRoute)
+router.use(productRoute)
 
 
 module.exports = router
